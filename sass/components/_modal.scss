@@ -1,0 +1,43 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms $timing-function;
+
+  &--is-hidden {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.close-button {
+  position: absolute;
+  @include centeredFlex();
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+
+  background-color: $primary-bg-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  @extend %button;
+}
+
+.close-button__icon {
+  fill: $primary-black-color;
+  transition: fill 250ms $timing-function;
+
+  .close-button:hover &,
+  .close-button:focus & {
+    fill: $accent-color;
+  }
+}

@@ -1,0 +1,28 @@
+.work-list {
+  display: flex;
+
+  @extend %list;
+}
+
+.work-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.work__thumb {
+  position: relative;
+}
+
+.work__description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  margin: 0;
+  padding: 27px 0;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $primary-white-color;
+  background-color: $description-bg-color;
+}

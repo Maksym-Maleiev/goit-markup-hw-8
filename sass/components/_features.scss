@@ -1,0 +1,36 @@
+.feature-list {
+  display: flex;
+
+  @extend %list;
+}
+
+.feature-list__item:not(:last-child) {
+  margin-right: 30px;
+  max-width: 270px;
+}
+
+.feature__thumb {
+  @include centeredFlex();
+
+  margin-bottom: 30px;
+  height: 120px;
+  background-color: $secondary-bg-color;
+  border-radius: 4px;
+}
+
+.feature__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: inherit;
+  text-transform: uppercase;
+}
+
+.feature__text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: $secondary-text-color;
+  line-height: 1.7;
+}
