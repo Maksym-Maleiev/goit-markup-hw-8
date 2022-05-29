@@ -1,17 +1,38 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section--no-padding {
-  padding-bottom: 0;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+  }
 }
 
 .section__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
   text-align: center;
+  white-space: nowrap;
+
+  @media screen and (max-width: 479px) {
+    font-size: 24px;
+    line-height: 1.18;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    font-size: 28px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }

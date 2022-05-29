@@ -1,13 +1,13 @@
 .feature-list {
-  display: flex;
+  // display: flex;
 
   @extend %list;
 }
 
-.feature-list__item:not(:last-child) {
-  margin-right: 30px;
-  max-width: 270px;
-}
+// .feature-list__item:not(:last-child) {
+//   margin-right: 30px;
+//   max-width: 270px;
+// }
 
 .feature__thumb {
   @include centeredFlex();

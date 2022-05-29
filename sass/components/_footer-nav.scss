@@ -1,5 +1,10 @@
 .footer-nav {
-  margin-right: 70px;
+  // margin-right: 70px;
+
+  @media screen and (max-width: 767px) {
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
 }
 
 .page-footer .logo {

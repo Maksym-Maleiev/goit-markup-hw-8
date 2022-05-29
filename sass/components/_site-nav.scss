@@ -1,8 +1,22 @@
 .site-nav {
-  display: flex;
-  margin-left: 93px;
+  // display: flex;
+  // margin-left: 93px;
 
   @extend %list;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 48px 40px 48px 40px;
+    background-color: $primary-bg-color;
+
+    &.is-open {
+      display: block;
+    }
+  }
 }
 
 .site-nav__item:not(:last-child) {
