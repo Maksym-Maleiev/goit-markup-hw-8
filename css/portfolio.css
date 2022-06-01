@@ -425,6 +425,7 @@ img {
     height: 796px;
     padding: 48px 40px 48px 40px;
     background-color: #ffffff;
+    overflow-y: scroll;
   }
 }
 
