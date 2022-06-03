@@ -1,41 +1,4 @@
-.auth-nav-mobile {
-  display: flex;
-
-  @extend %list;
-
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
-    margin-bottom: 48px;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
-
-.auth-nav-mobile__link {
-  display: inline-flex;
-  align-items: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  color: $secondary-text-color;
-  font-size: 24px;
-  line-height: 1.17;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: color 250ms $timing-function;
-
-  @extend %link;
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
-}
-
 .auth-nav {
-  display: flex;
-
   @extend %list;
 
   @media screen and (max-width: 767px) {

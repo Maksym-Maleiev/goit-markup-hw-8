@@ -1,0 +1,112 @@
+.mob-menu {
+  display: none;
+
+  &.is-hidden {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: $primary-white-color;
+  }
+}
+
+.menu-open,
+.menu-close {
+  display: inline-flex;
+  padding: 10px 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.icon-close {
+  display: none;
+}
+
+.menu-close.is-hidden .menu-open__icon {
+  display: none;
+}
+
+.menu-open.is-hidden .menu-close__icon {
+  display: block;
+}
+
+.menu-close {
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+
+.mob-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.mob-site-nav {
+  @extend %list;
+}
+
+.mob-site-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-site-nav__link {
+  @extend %link;
+
+  @include font(500, 40px, 1.18, 0.02em);
+  color: currentColor;
+}
+
+.mob-auth-nav {
+  @extend %list;
+
+  margin-bottom: 64px;
+}
+
+.mob-auth-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-auth-nav__link {
+  @extend %link;
+
+  @include font(500, 24px, 1.17, 0.02em);
+  color: $secondary-text-color;
+}
+
+.mob-social-nav {
+  display: none;
+
+  @extend %list;
+
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.mob-social-nav__item:not(:last-child) {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-social-nav__link {
+  @extend %link;
+
+  @include font(500, 18px, 1.2, 0.02em);
+  color: $accent-color;
+}
