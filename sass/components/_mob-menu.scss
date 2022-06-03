@@ -23,13 +23,21 @@
   border: none;
   background-color: transparent;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 }
 
-.icon-close {
-  display: none;
+.menu-open__icon,
+.menu-close__icon {
+  transition: fill 250ms $timing-function;
+
+  .menu-open:hover &,
+  .menu-open:focus &,
+  .menu-close:hover &,
+  .menu-close:focus & {
+    fill: $accent-color;
+  }
 }
 
 .menu-close.is-hidden .menu-open__icon {
@@ -52,6 +60,7 @@
   justify-content: space-between;
   padding-left: 40px;
   padding-right: 40px;
+  height: 100%;
 }
 
 .mob-site-nav {
@@ -65,8 +74,17 @@
 .mob-site-nav__link {
   @extend %link;
 
+  display: inline-block;
+
   @include font(500, 40px, 1.18, 0.02em);
   color: currentColor;
+
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .mob-auth-nav {
@@ -82,8 +100,18 @@
 .mob-auth-nav__link {
   @extend %link;
 
+  display: inline-block;
+
   @include font(500, 24px, 1.17, 0.02em);
   color: $secondary-text-color;
+
+  transition: transform 250ms $timing-function, color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    color: $accent-color;
+  }
 }
 
 .mob-social-nav {
@@ -92,9 +120,7 @@
   @extend %list;
 
   @media screen and (min-width: $mobile) and (max-width: 767px) {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    @include centeredFlex($jc: flex-start);
   }
 }
 
@@ -107,6 +133,15 @@
 .mob-social-nav__link {
   @extend %link;
 
+  display: inline-block;
+
   @include font(500, 18px, 1.2, 0.02em);
   color: $accent-color;
+
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $secondary-accent-color;
+  }
 }

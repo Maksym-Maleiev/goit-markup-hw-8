@@ -4,11 +4,16 @@
 
 .form__title {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
+
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.15;
+  }
 }
 
 .form-field {
@@ -101,8 +106,13 @@
 .form-policy {
   margin-bottom: 30px;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.17;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .checkbox-icon {
@@ -124,15 +134,18 @@
   }
 }
 
+.form-policy__label {
+  white-space: nowrap;
+}
+
 .form-policy__link {
-  margin-left: 5px;
   color: $accent-color;
 }
 
 .submit-button {
+  @extend %button;
+
   display: block;
   margin: 0 auto;
   padding: 10px 55px;
-
-  @extend %button;
 }

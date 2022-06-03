@@ -1,0 +1,26 @@
+.page-header {
+  @extend .container;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
+}
+
+.page-header::after {
+  @media screen and (min-width: $tablet) {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: 1px;
+    width: 100%;
+
+    background-color: $page-header-border-color;
+  }
+}
