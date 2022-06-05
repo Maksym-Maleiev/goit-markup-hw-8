@@ -41,48 +41,48 @@
       </li>
     </ul>
 
-    <button type="button" class="menu-open">
-      <svg class="menu-open__icon" width="40" height="40">
+    <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="menu-toggle__icon" width="40" height="40">
         <use href="./images/icons.svg#menu"></use>
       </svg>
     </button>
 
     <!-- Мобильное меню -->
 
-    <div class="mob-menu">
-      <button type="button" class="menu-close">
-        <svg class="menu-close__icon" width="40" height="40">
+    <div class="mobile-container js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-toggle js-close-menu">
+        <svg class="menu-toggle__icon" width="40" height="40">
           <use href="./images/icons.svg#close"></use>
         </svg>
       </button>
 
-      <div class="mob-container">
-        <ul class="mob-site-nav">
-          <li class="mob-site-nav__item"><a href="./index.html"
-              class="mob-site-nav__link mob-site-nav__link--current link">Студия</a>
+      <div class="mobile-menu">
+        <ul class="mobile-site-nav">
+          <li class="mobile-site-nav__item"><a href="./index.html"
+              class="mobile-site-nav__link mobile-site-nav__link--current link">Студия</a>
           </li>
-          <li class="mob-site-nav__item"><a href="./portfolio.html" class="mob-site-nav__link">Портфолио</a></li>
-          <li class="mob-site-nav__item"><a href="#contacts" class="mob-site-nav__link">Контакты</a></li>
+          <li class="mobile-site-nav__item"><a href="./portfolio.html" class="mobile-site-nav__link">Портфолио</a></li>
+          <li class="mobile-site-nav__item"><a href="#contacts" class="mobile-site-nav__link">Контакты</a></li>
         </ul>
 
-        <div class="mob-wrapper">
-          <ul class="mob-auth-nav">
-            <li class="mob-auth-nav__item">
-              <a href="tel:+380961111111" class="mob-auth-nav__link">
+        <div class="mobile-wrapper">
+          <ul class="mobile-auth-nav">
+            <li class="mobile-auth-nav__item">
+              <a href="tel:+380961111111" class="mobile-auth-nav__link">
                 +38 096 111 11 11
               </a>
             </li>
-            <li class="mob-auth-nav__item">
-              <a href="mailto:info@devstudio.com" class="mob-auth-nav__link">
+            <li class="mobile-auth-nav__item">
+              <a href="mailto:info@devstudio.com" class="mobile-auth-nav__link">
                 info@devstudio.com</a>
             </li>
           </ul>
 
-          <ul class="mob-social-nav">
-            <li class="mob-social-nav__item"><a href="" class="mob-social-nav__link">Instagram</a></li>
-            <li class="mob-social-nav__item"><a href="" class="mob-social-nav__link">Twitter</a></li>
-            <li class="mob-social-nav__item"><a href="" class="mob-social-nav__link">Facebook</a></li>
-            <li class="mob-social-nav__item"><a href="" class="mob-social-nav__link">LinkedIn</a></li>
+          <ul class="mobile-social-nav">
+            <li class="mobile-social-nav__item"><a href="" class="mobile-social-nav__link">Instagram</a></li>
+            <li class="mobile-social-nav__item"><a href="" class="mobile-social-nav__link">Twitter</a></li>
+            <li class="mobile-social-nav__item"><a href="" class="mobile-social-nav__link">Facebook</a></li>
+            <li class="mobile-social-nav__item"><a href="" class="mobile-social-nav__link">LinkedIn</a></li>
           </ul>
         </div>
       </div>
@@ -581,14 +581,19 @@
     </div>
   </div>
 
+  <!-- Скрипт на отключение скрола -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+
   <!-- Скрипт на переключатель мобильного меню -->
-  <script src="./mobile-menu.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 
   <!-- Скрипт на модальное окно -->
-  <script src="./modal.js"></script>
+  <script src="./js/modal.js"></script>
 
   <!-- Скрипт на форму -->
-  <script src="./form.js"></script>
+  <script src="./js/form.js"></script>
 
   <!-- Скрипт на фиксированный хедер -->
   <!-- <script>
