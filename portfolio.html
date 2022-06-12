@@ -13,26 +13,27 @@
   <!-- Шапка веб-страницы -->
   <header class="page-header container">
     <nav class="main-nav">
-      <a href="./index.html" class="logo link"><span class="logo__accent">Web</span>Studio</a>
-      <ul class="site-nav list">
-        <li class="site-nav__item"><a href="./index.html" class="site-nav__link link">Студия</a>
+      <a href="./index.html" class="logo"><span class="logo__accent">Web</span>Studio</a>
+
+      <ul class="site-nav" id="site-nav">
+        <li class="site-nav__item"><a href="./index.html" class="site-nav__link">Студия</a>
         </li>
         <li class="site-nav__item"><a href="./portfolio.html"
-            class="site-nav__link site-nav__link--current link">Портфолио</a></li>
-        <li class="site-nav__item"><a href="#contacts" class="site-nav__link link">Контакты</a></li>
+            class="site-nav__link site-nav__link--current">Портфолио</a></li>
+        <li class="site-nav__item"><a href="#contacts" class="site-nav__link">Контакты</a></li>
       </ul>
     </nav>
 
-    <ul class="auth-nav list">
+    <ul class="auth-nav">
       <li class="auth-nav__item">
-        <a href="mailto:info@devstudio.com" class="auth-nav__link link">
+        <a href="mailto:info@devstudio.com" class="auth-nav__link">
           <svg class="auth-nav__icon" width="16" height="12">
             <use href="./images/icons.svg#mail"></use>
           </svg>
           info@devstudio.com</a>
       </li>
       <li class="auth-nav__item">
-        <a href="tel:+380961111111" class="auth-nav__link link">
+        <a href="tel:+380961111111" class="auth-nav__link">
           <svg class="auth-nav__icon" width="10" height="16">
             <use href="./images/icons.svg#tel"></use>
           </svg>
@@ -40,6 +41,53 @@
         </a>
       </li>
     </ul>
+
+    <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="menu-toggle__icon" width="40" height="40">
+        <use href="./images/icons.svg#menu"></use>
+      </svg>
+    </button>
+
+    <!-- Мобильное меню -->
+
+    <div class="mobile-container js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-toggle js-close-menu">
+        <svg class="menu-toggle__icon" width="40" height="40">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+
+      <div class="mobile-menu">
+        <ul class="mobile-site-nav">
+          <li class="mobile-site-nav__item"><a href="./index.html"
+              class="mobile-site-nav__link mobile-site-nav__link--current link">Студия</a>
+          </li>
+          <li class="mobile-site-nav__item"><a href="./portfolio.html" class="mobile-site-nav__link">Портфолио</a></li>
+          <li class="mobile-site-nav__item"><a href="#contacts" class="mobile-site-nav__link">Контакты</a></li>
+        </ul>
+
+        <div class="mobile-wrapper">
+          <ul class="mobile-auth-nav">
+            <li class="mobile-auth-nav__item">
+              <a href="tel:+380961111111" class="mobile-auth-nav__link">
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="mobile-auth-nav__item">
+              <a href="mailto:info@devstudio.com" class="mobile-auth-nav__link">
+                info@devstudio.com</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-social-nav">
+            <li class="mobile-social-nav__item"><a href="" class="mobile-social-nav__link">Instagram</a></li>
+            <li class="mobile-social-nav__item"><a href="" class="mobile-social-nav__link">Twitter</a></li>
+            <li class="mobile-social-nav__item"><a href="" class="mobile-social-nav__link">Facebook</a></li>
+            <li class="mobile-social-nav__item"><a href="" class="mobile-social-nav__link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
 
   <!-- Уникальный контент  -->
@@ -61,7 +109,13 @@
           <a href="" class="portfolio-list__link">
             <article class="card">
               <div class="card__thumb">
-                <img src="./images/Технокряк.jpg" alt="Технокряк" />
+                <picture>
+                  <source srcset="./images/portfolio-set__1m.webp 1x, ./images/portfolio-set__1m@2x.webp 2x"
+                    media="(max-width: 767px)" type="image/webp">
+                  <source srcset="./images/portfolio-set__1m.jpg 1x, ./images/portfolio-set__1m@2x.jpg 2x"
+                    media="(max-width: 767px)" type="image/jpg">
+                  <img src="./images/portfolio-set__1m.jpg" alt="Технокряк">
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
@@ -83,7 +137,13 @@
           <a href="" class="portfolio-list__link">
             <article class="card">
               <div class="card__thumb">
-                <img src="./images/Постер-New-Orlean-vs-Golden-Star.jpg" alt="Постер New Orlean vs Golden Star" />
+                <picture>
+                  <source srcset="./images/portfolio-set__2m.webp 1x, ./images/portfolio-set__2m@2x.webp 2x"
+                    media="(max-width: 767px)" type="image/webp">
+                  <source srcset="./images/portfolio-set__2m.jpg 1x, ./images/portfolio-set__2m@2x.jpg 2x"
+                    media="(max-width: 767px)" type="image/jpg">
+                  <img src="./images/portfolio-set__2m.jpg" alt="Постер New Orlean vs Golden Star">
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
@@ -105,7 +165,13 @@
           <a href="" class="portfolio-list__link">
             <article class="card">
               <div class="card__thumb">
-                <img src="./images/Ресторан-Seafood.jpg" alt="Ресторан Seafood" />
+                <picture>
+                  <source srcset="./images/portfolio-set__3m.webp 1x, ./images/portfolio-set__3m@2x.webp 2x"
+                    media="(max-width: 767px)" type="image/webp">
+                  <source srcset="./images/portfolio-set__3m.jpg 1x, ./images/portfolio-set__3m@2x.jpg 2x"
+                    media="(max-width: 767px)" type="image/jpg">
+                  <img src="./images/portfolio-set__3m.jpg" alt="Ресторан Seafood">
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
@@ -127,7 +193,13 @@
           <a href="" class="portfolio-list__link">
             <article class="card">
               <div class="card__thumb">
-                <img src="./images/Проект-Prime.jpg" alt="Проект Prime" />
+                <picture>
+                  <source srcset="./images/portfolio-set__4m.webp 1x, ./images/portfolio-set__4m@2x.webp 2x"
+                    media="(max-width: 767px)" type="image/webp">
+                  <source srcset="./images/portfolio-set__4m.jpg 1x, ./images/portfolio-set__4m@2x.jpg 2x"
+                    media="(max-width: 767px)" type="image/jpg">
+                  <img src="./images/portfolio-set__4m.jpg" alt="Проект Prime">
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
@@ -149,7 +221,13 @@
           <a href="" class="portfolio-list__link">
             <article class="card">
               <div class="card__thumb">
-                <img src="./images/Проект-Boxes.jpg" alt="Проект Boxes" />
+                <picture>
+                  <source srcset="./images/portfolio-set__5m.webp 1x, ./images/portfolio-set__5m@2x.webp 2x"
+                    media="(max-width: 767px)" type="image/webp">
+                  <source srcset="./images/portfolio-set__5m.jpg 1x, ./images/portfolio-set__5m@2x.jpg 2x"
+                    media="(max-width: 767px)" type="image/jpg">
+                  <img src="./images/portfolio-set__5m.jpg" alt="Проект Boxes">
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
@@ -171,7 +249,13 @@
           <a href="" class="portfolio-list__link">
             <article class="card">
               <div class="card__thumb">
-                <img src="./images/Inspiration-has-no-Borders.jpg" alt="Inspiration has no Borders" />
+                <picture>
+                  <source srcset="./images/portfolio-set__6m.webp 1x, ./images/portfolio-set__6m@2x.webp 2x"
+                    media="(max-width: 767px)" type="image/webp">
+                  <source srcset="./images/portfolio-set__6m.jpg 1x, ./images/portfolio-set__6m@2x.jpg 2x"
+                    media="(max-width: 767px)" type="image/jpg">
+                  <img src="./images/portfolio-set__6m.jpg" alt="Inspiration has no Borders">
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
@@ -193,7 +277,13 @@
           <a href="" class="portfolio-list__link">
             <article class="card">
               <div class="card__thumb">
-                <img src="./images/Издание-Limited-Edition.jpg" alt="Издание Limited Edition" />
+                <picture>
+                  <source srcset="./images/portfolio-set__7m.webp 1x, ./images/portfolio-set__7m@2x.webp 2x"
+                    media="(max-width: 767px)" type="image/webp">
+                  <source srcset="./images/portfolio-set__7m.jpg 1x, ./images/portfolio-set__7m@2x.jpg 2x"
+                    media="(max-width: 767px)" type="image/jpg">
+                  <img src="./images/portfolio-set__7m.jpg" alt="Издание Limited Edition">
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
@@ -215,7 +305,13 @@
           <a href="" class="portfolio-list__link">
             <article class="card">
               <div class="card__thumb">
-                <img src="./images/Проект-LAB.jpg" alt="Проект LAB" />
+                <picture>
+                  <source srcset="./images/portfolio-set__8m.webp 1x, ./images/portfolio-set__8m@2x.webp 2x"
+                    media="(max-width: 767px)" type="image/webp">
+                  <source srcset="./images/portfolio-set__8m.jpg 1x, ./images/portfolio-set__8m@2x.jpg 2x"
+                    media="(max-width: 767px)" type="image/jpg">
+                  <img src="./images/portfolio-set__8m.jpg" alt="Проект LAB">
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
@@ -237,7 +333,13 @@
           <a href="" class="portfolio-list__link">
             <article class="card">
               <div class="card__thumb">
-                <img src="./images/Growing-Business.jpg" alt="Growing Business" />
+                <picture>
+                  <source srcset="./images/portfolio-set__9m.webp 1x, ./images/portfolio-set__9m@2x.webp 2x"
+                    media="(max-width: 767px)" type="image/webp">
+                  <source srcset="./images/portfolio-set__9m.jpg 1x, ./images/portfolio-set__9m@2x.jpg 2x"
+                    media="(max-width: 767px)" type="image/jpg">
+                  <img src="./images/portfolio-set__9m.jpg" alt="Growing Business">
+                </picture>
                 <div class="overlay">
                   <p class="overlay__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
@@ -330,6 +432,9 @@
       </div>
     </div>
   </footer>
+
+  <!-- Скрипт на переключатель мобильного меню -->
+  <script src="./js/mobile-menu.js"></script>
 
   <!-- Фиксированный хедер -->
   <!-- <script>
