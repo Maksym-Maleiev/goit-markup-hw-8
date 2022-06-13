@@ -29,6 +29,7 @@
   padding: 6px 22px;
   transition: background-color 250ms $timing-function, color 250ms $timing-function,
     box-shadow 250ms $timing-function;
+  color: $primary-text-color;
 
   @extend %button;
 

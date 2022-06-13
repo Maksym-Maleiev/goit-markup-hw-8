@@ -59,11 +59,11 @@
 
       <div class="mobile-menu">
         <ul class="mobile-site-nav">
-          <li class="mobile-site-nav__item"><a href="./index.html"
-              class="mobile-site-nav__link mobile-site-nav__link--current link">Студия</a>
+          <li class="mobile-site-nav__item"><a href="./index.html" class="mobile-site-nav__link link">Студия</a>
           </li>
-          <li class="mobile-site-nav__item"><a href="./portfolio.html" class="mobile-site-nav__link">Портфолио</a></li>
-          <li class="mobile-site-nav__item"><a href="#contacts" class="mobile-site-nav__link">Контакты</a></li>
+          <li class="mobile-site-nav__item"><a href="./portfolio.html"
+              class="mobile-site-nav__link mobile-site-nav__link--current link">Портфолио</a></li>
+          <li class="mobile-site-nav__item"><a href="#contacts" class="mobile-site-nav__link link">Контакты</a></li>
         </ul>
 
         <div class="mobile-wrapper">
@@ -112,8 +112,13 @@
                 <picture>
                   <source srcset="./images/portfolio-set__1m.webp 1x, ./images/portfolio-set__1m@2x.webp 2x"
                     media="(max-width: 767px)" type="image/webp">
+                  <source srcset="./images/portfolio-set__1t.webp 1x, ./images/portfolio-set__1t@2x.webp 2x"
+                    media="(min-width: 768px)" type="image/webp">
+
                   <source srcset="./images/portfolio-set__1m.jpg 1x, ./images/portfolio-set__1m@2x.jpg 2x"
                     media="(max-width: 767px)" type="image/jpg">
+                  <source srcset="./images/portfolio-set__1t.jpg 1x, ./images/portfolio-set__1t@2x.jpg 2x"
+                    media="(min-width: 768px)" type="image/jpg">
                   <img src="./images/portfolio-set__1m.jpg" alt="Технокряк">
                 </picture>
                 <div class="overlay">
@@ -140,8 +145,13 @@
                 <picture>
                   <source srcset="./images/portfolio-set__2m.webp 1x, ./images/portfolio-set__2m@2x.webp 2x"
                     media="(max-width: 767px)" type="image/webp">
+                  <source srcset="./images/portfolio-set__2t.webp 1x, ./images/portfolio-set__2t@2x.webp 2x"
+                    media="(min-width: 768px)" type="image/webp">
+
                   <source srcset="./images/portfolio-set__2m.jpg 1x, ./images/portfolio-set__2m@2x.jpg 2x"
                     media="(max-width: 767px)" type="image/jpg">
+                  <source srcset="./images/portfolio-set__2t.jpg 1x, ./images/portfolio-set__2t@2x.jpg 2x"
+                    media="(min-width: 768px)" type="image/jpg">
                   <img src="./images/portfolio-set__2m.jpg" alt="Постер New Orlean vs Golden Star">
                 </picture>
                 <div class="overlay">
@@ -432,6 +442,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Скрипт на отключение скрола -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
 
   <!-- Скрипт на переключатель мобильного меню -->
   <script src="./js/mobile-menu.js"></script>
