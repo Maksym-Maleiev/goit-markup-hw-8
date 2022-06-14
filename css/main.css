@@ -535,8 +535,8 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: -5px;
     text-align: center;
+    margin: -5px;
   }
 }
 
@@ -594,9 +594,9 @@ img {
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .mobile-social-nav__item {
-    margin: 5px;
     -ms-flex-preferred-size: calc((100% - 4 * 5px) / 2);
         flex-basis: calc((100% - 4 * 5px) / 2);
+    margin: 5px;
   }
 }
 
