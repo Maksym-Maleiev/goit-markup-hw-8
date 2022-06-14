@@ -17,13 +17,20 @@
   }
 
   @media screen and (max-width: 479px) {
-    min-width: calc(100% - 30px);
-  }
-
-  @media screen and (min-width: $mobile) {
-    max-width: 450px;
     width: 100%;
   }
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
+  }
+  // @media screen and (max-width: 479px) {
+  //   min-width: calc(100% - 30px);
+  // }
+
+  // @media screen and (min-width: $mobile) {
+  //   max-width: 450px;
+  //   width: 100%;
+  // }
 
   @media screen and (min-width: $desktop) {
     max-width: 528px;
@@ -48,7 +55,7 @@
 }
 
 .close-button__icon {
-  fill: $primary-black-color;
+  fill: currentColor;
   transition: fill 250ms $timing-function;
 
   .close-button:hover &,

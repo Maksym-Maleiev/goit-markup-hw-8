@@ -7,13 +7,13 @@
   padding-bottom: 118px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero480.jpg');
-  background-size: 480px 400px;
+  background-size: cover;
+  background-position: center;
   background-color: $hero-bg-color;
   text-align: center;
 
   @media screen and (min-width: $tablet) {
     max-width: 768px;
-    background-size: 768px 400px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -21,7 +21,6 @@
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-size: 1600px 600px;
   }
 }
 
