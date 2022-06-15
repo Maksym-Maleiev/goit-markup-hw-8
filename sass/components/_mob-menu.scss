@@ -123,7 +123,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: -5px;
   }
 
   @media screen and (min-width: $mobile) and (max-width: 767px) {
@@ -170,7 +169,6 @@
 .mobile-social-nav__item {
   @media screen and (min-width: 320px) and (max-width: 479px) {
     flex-basis: calc((100% - 4 * 5px) / 2);
-    margin: 5px;
   }
 }
 
@@ -195,5 +193,9 @@
   &:hover,
   &:focus {
     color: $secondary-accent-color;
+  }
+
+  @media screen and (max-width: 479px) {
+    padding: 5px;
   }
 }
